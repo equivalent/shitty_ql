@@ -13,7 +13,8 @@ Example
 `/accounts?include=account.name,account.books.page.2,account.books.limit.10`
 
 
-> todo:  description in progress
+> todo:  gem is ready I'm just writing up documentation, pls come back
+> soon
 
 
 
@@ -35,7 +36,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+> todo:  Usage in progress
 
 ## Development
 
