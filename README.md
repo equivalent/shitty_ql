@@ -1,8 +1,21 @@
 # ShittyQl
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shitty_ql`. To experiment with that code, run `bin/console` for an interactive prompt.
+[ShittyQl](https://github.com/equivalent/shitty_ql) simple gem for building constructive JSON API using GET requests.
 
-TODO: Delete this and the text above, and describe your gem
+
+It's more a pragmatic tool and philosophy of how to write JSON API where
+Frontend constructs what data it needs using GET query
+
+So the gem tries to do what GraphQL for obtaining data but obviously gem is more :hankey:
+
+
+Example
+`/accounts?include=account.name,account.books.page.2,account.books.limit.10`
+
+
+> todo:  description in progress
+
+
 
 ## Installation
 
