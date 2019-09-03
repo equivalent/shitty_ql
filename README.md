@@ -2,6 +2,8 @@
 
 [ShittyQl](https://github.com/equivalent/shitty_ql) simple gem for building constructive JSON API using GET requests.
 
+[![Build Status](https://travis-ci.org/equivalent/shitty_ql.svg?branch=master)](https://travis-ci.org/equivalent/shitty_ql)
+
 
 It's more a pragmatic tool and philosophy of how to write JSON API where
 Frontend constructs what data it needs using GET query
