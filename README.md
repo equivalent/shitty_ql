@@ -39,6 +39,7 @@ And then execute:
 
 This is quite comprehensive topic. Pls read up section in `/docs`:
 
+* [example](https://github.com/equivalent/shitty_ql/blob/master/docs/example.md)
 
 
 
