@@ -13,17 +13,19 @@ can build one in your Rails application using this gem.
 
 Example of API endpoints
 
-`GET /student/123?include=student.name,student.dob`
-`GET /student/123?include=student.name,student.work.title,student.work_list`
-`GET /student/123?include=student.name,student.work.title,student.work_list.page.2`
-`GET /student/123?include=student.name,student.work.title,student.work_list.page.2.limit.10`
-`GET /student/123?include=student.name,student.work.title,student.work_list.page.2,student.work_list.limit.10`
-`GET /student/123?include=student.name,student.work.title,student.work_list.page.2,student.work_list.limit.10,student.work_list.order.desc`
+```
+GET /student/123?include=student.name,student.dob
+GET /student/123?include=student.name,student.work.title,student.work_list
+GET /student/123?include=student.name,student.work.title,student.work_list.page.2
+GET /student/123?include=student.name,student.work.title,student.work_list.page.2.limit.10
+GET /student/123?include=student.name,student.work.title,student.work_list.page.2,student.work_list.limit.10
+GET /student/123?include=student.name,student.work.title,student.work_list.page.2,student.work_list.limit.10,student.work_list.order.desc
 
 
-`GET /students?include=student.name,student.dob`
-`GET /students?include=student.name,student.work.title,student.work_list`
+GET /students?include=student.name,student.dob
+GET /students?include=student.name,student.work.title,student.work_list
 
+```
 
 > So the gem tries to do what GraphQL for obtaining data but obviously gem solution is more :hankey: ...but at the same time more pragmatic.
 
