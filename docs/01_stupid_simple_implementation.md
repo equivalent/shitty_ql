@@ -3,15 +3,18 @@
 Most stupid simple implementation could be:
 
 
-```
+```ruby
 # config/routes
 
 Rails.application.routes.draw do
  resources :students, only: [:show]
 end
+```
 
+```ruby
 # app/controllers/students_controller.rb
 class StudentsController < ApplicationController
+
   # GET /students/123?include?student.___
   def show
     student = Student.find(params[:id])
@@ -55,7 +58,5 @@ This way when you query `/students/123?include=student.dob` you get:
 }
 ```
 
-
-
-
-
+> This is just demo of the most simple way how you can use this gem, I
+> don't recommend this solution. Pls check other examples :)

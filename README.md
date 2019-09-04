@@ -1,28 +1,52 @@
-# ShittyQl
+# ShittyQL
 
-[ShittyQl](https://github.com/equivalent/shitty_ql) simple gem for building constructive JSON API using GET requests.
+[ShittyQl](https://github.com/equivalent/shitty_ql) simple gem for building constructive/query based JSON API using GET requests.
 
 [![Build Status](https://travis-ci.org/equivalent/shitty_ql.svg?branch=master)](https://travis-ci.org/equivalent/shitty_ql)
 
+ShittyQL is more a pragmatic tool and **philosophy** of how to write JSON API where
+Frontend constructs what data it needs using GET query.
 
-It's more a pragmatic tool and philosophy of how to write JSON API where
-Frontend constructs what data it needs using GET query
-
-So the gem tries to do what GraphQL for obtaining data but obviously gem is more :hankey:
+Gem is not a comprehensive API solution for [Ruby on Rails](https://rubyonrails.org), but we will show you how you
+can build one in your Rails application using this gem.
 
 
 Example of API endpoints
 
-`GET /accounts?include=account.name,account.books`
-`GET /accounts?include=account.name,account.books.page.2`
-`GET /accounts?include=account.name,account.books.page.2.limit.10`
-`GET /accounts?include=account.name,account.books.page.2,account.books.limit.10`
-`GET /accounts?include=account.name,account.books.page.2,account.books.limit.10,accounts.books.order.desc`
+`GET /student/123?include=student.name,student.dob`
+`GET /student/123?include=student.name,student.work.title,student.work_list`
+`GET /student/123?include=student.name,student.work.title,student.work_list.page.2`
+`GET /student/123?include=student.name,student.work.title,student.work_list.page.2.limit.10`
+`GET /student/123?include=student.name,student.work.title,student.work_list.page.2,student.work_list.limit.10`
+`GET /student/123?include=student.name,student.work.title,student.work_list.page.2,student.work_list.limit.10,student.work_list.order.desc`
+
+
+`GET /students?include=student.name,student.dob`
+`GET /students?include=student.name,student.work.title,student.work_list`
+
+
+> So the gem tries to do what GraphQL for obtaining data but obviously gem solution is more :hankey: ...but at the same time more pragmatic.
 
 
 > todo:  gem is ready I'm just writing up documentation, pls come back
 > soon
 
+
+#### why don't you use GraphQL ?
+
+We love [GraphQL](https://graphql.org) and recommending to use it
+instead of [ShittyQL](https://github.com/equivalent/shitty_ql). 
+
+But Sometimes you are dealing with legacy REST API and you want to slowly
+introduce query language to the application API and you don't have the luxury of switching
+the entire project to GraphQL. This is where ShittyQL may come in handy.
+You may slowly transition your API to query/constructive based API and then maybe
+make it GraphQL (but I doubt it as you will end up loving this :hankey:)
+
+Another benefit of ShittyQL is that it's job is only to help you to GET
+/retrieve data. ShittyQL is not imposing any way how to
+create/update/delete your data. That is up to you to decide how to do it
+(REST is pretty good in this actually)
 
 
 ## Installation
@@ -41,7 +65,8 @@ And then execute:
 
 This is quite comprehensive topic. Pls read up section in `/docs`:
 
-* [example](https://github.com/equivalent/shitty_ql/blob/master/docs/example.md)
+* [01 really simple example](https://github.com/equivalent/shitty_ql/blob/master/docs/01_stupid_simple_implementation.md)
+* [02 serializer implementation](https://github.com/equivalent/shitty_ql/blob/master/docs/02_serializer_example.md)
 
 
 
